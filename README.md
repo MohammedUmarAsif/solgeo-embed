@@ -15,6 +15,7 @@ embeddings and a transparent task head are the default path for an 8 GB GPU.
 - cosine similarity search;
 - class prototypes and confidence margins;
 - serializable feature-cache fingerprints;
+- leakage-resistant spatial group splits and explicit review-rate metrics;
 - NumPy-only tests and no hidden model downloads.
 
 ## Scientific boundary
@@ -22,3 +23,6 @@ embeddings and a transparent task head are the default path for an 8 GB GPU.
 Embeddings do not replace labels, spatial splits, or task-specific baselines.
 Always compare a prototype head against a spectral or Random Forest baseline and
 report spatial leakage, class imbalance, and uncertainty.
+
+Keep neighbouring patches in the same spatial split, then report accuracy,
+macro-F1, and the fraction routed to human review.
